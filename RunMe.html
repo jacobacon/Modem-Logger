@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script type="text/javascript" src="jquery-2.0.3.min.js"></script>
+</head>
+
+<body style="background-color:blue;">
+</body>
+
+<body>
+<h1><center>Log Data from Modem</center></h1>
+<h2><center>Press F12 to view log output.</center></h2>
+<center><p id="run">Logging is not running.</p></center>
+
+<center><button type="button" onclick="start()">Start Logging</button>
+<button type="button" onclick="stop()">Stop Logging</button>
+<!--<button type="button" onclick="log()">Log</button> -->
+</center>
+<script>
+var run = false;
+var write;
+var url = "https://dl.dropboxusercontent.com/u/28445546/model.json";
+var url_swi = "http://swi.hotspot/api/model.json";
+
+//Starts Logging
+function start() {
+run = true;
+document.getElementById("run").innerHTML="Logging is running!";
+alert("Started Logging");
+loopA();
+}
+
+//Stops Logging
+function stop() {
+run = false;
+document.getElementById("run").innerHTML="Logging is not running!";
+alert("Stopped Logging");
+
+}
+
+//Loops to keep Page Loaded
+function loopA(){
+if (run == true){
+log();
+window.setTimeout(loopB, 5000);
+}
+}
+
+function loopB(){
+if (run == true){
+log();
+window.setTimeout(loopA, 5000);
+}
+}
+
+
+
+function log() {
+$.getJSON(url, function(data){
+
+	var currTime = data.general.currTime;
+	var rsrp = data.wwan.signalStrength.rsrp;
+	var percent = data.wwan.signalStrength.percent;
+	var latitude = data.lbs.latitude.value;
+	var longitude = data.lbs.longitude.value;
+	var fixTime = data.lbs.fixTime;
+	
+	
+	console.log("Current Time: " + currTime + " Fixed Time: " + fixTime + " RSRP: " + rsrp + " Percent: " + percent + " Lat: " + latitude + " Long: " + longitude);
+	
+});
+}
+
+</script>
+
+</body>
+</html>
+
+
+<!-- Logs Data from connected SWI Hotspot Modem, to a log file.
+Copyright 8-23-13 Jacob Beneski. This was created for Worldcall, and Evolve broadband to easier log data. -->

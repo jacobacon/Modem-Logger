@@ -1,0 +1,136 @@
+{
+	"custom": {
+	"lastWifiChan": 11
+	
+		,"activationRequired": false
+	
+}, 
+	"lcd": {
+	
+},
+	"sim": {
+	
+},
+	"sms": {
+	
+},
+	"session": {
+	"userRole": "Guest",
+	"lang": "en",
+	"secToken": "n1rjllZpdtRJB9dt8wvTU8ERvXMSGbA"
+},
+	"general": {
+	
+	"companyName":		"Sierra Wireless",
+	"verMajor": 		 1,
+	"verMinor": 	 	 6,
+	"environment":	    "Target",
+	"currTime": 		 162,
+	"timeZoneOffset": 	 -14400,
+	"deviceName": 	    "AC754S",
+	"useMetricSystem":   true
+},
+	"audio": {
+	
+	"muteState":	 		"off"
+},
+	"power": {
+	
+	"battChargeLevel": 	0,
+	"battChargeSource":"PC",		
+	"batteryState":    "NoBattery",
+	"charging": false,
+	"code": "power_0",
+	"text": "No battery"
+},	
+	"wwan": {
+	
+	"connectionCode": "wwan_Disconnected_None",
+	"connection": 	   			"Disconnected",
+	"currentPSserviceType":		"None",
+	"currentPSserviceTypeText": "None",
+	"sessDuration": 	0,
+	"sessDurationString": "00:00:00",
+	"sessStartTime": 	0,
+	"dataTransferred": {
+		"total": "0.00GB",
+		 "rx": "0.00GB",
+		 "tx": "0.00GB"
+	},
+	"signalStrength": {
+		"icon": "bars_0",
+		"rssi":-32768,
+		"rscp":-32768,
+		"ecio":-32768,
+		"rsrp":-32768,
+		"bars": 		0,				
+		"percent":		"0%",
+		"description":	"No service"
+	},
+	"dataString": "No Session"	
+},	
+	"lbs": {
+	"status": "GPS Tracking Location",
+	"statusCode": "true_true_true",
+	"mapService":		"Google",
+	"fixAvailable": 	 true,
+	"active":			 true,
+	"mode":			 "Continuous",
+	"error":			 -1,
+	"type": "StandAlone",
+	
+		
+			
+				"latitude": {
+					"value": "30.356749",
+					"degrees": 		30,
+					"minutes": 		21,
+					"seconds": 		24,
+					"text":		   "30&deg; 21&#39; 24&quot;"
+				},
+			
+			
+				"longitude": {
+					"value": "-97.991760",
+					"degrees": 		-97,
+					"minutes": 		59,
+					"seconds": 		30,
+					"text":		   "-97&deg; 59&#39; 30&quot;"
+				},
+			
+			
+				"altitude":		   247,
+			
+			
+			
+			
+				"satelliteCnt":		4,
+			
+			
+				"estimError":	   57.69,
+			
+			
+				"fixTime_stamp": 1061266789,
+				"fixTime":		   " 08/23/2013 12:19:49 am",
+			
+		
+	
+	"enabled": "On"
+},	
+	"wifi": {
+	
+	"users": "Wi-Fi",
+	"clientCount": 1,
+	"clientCountClass": "wifi_users_1"
+}
+	,	
+	"router": {
+	
+	"hostName": "swi",			
+	"clientList": {
+		
+  		"count": 1,
+  		"countString": "1 user"
+  	}
+}
+}
